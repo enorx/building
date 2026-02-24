@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.dls.atef.kits" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>DLS ATEF KITS</name>
+
+    <description>
+        DLS Kits Android Wrapper
+    </description>
+
+    <author email="dev@dls.com" href="https://enorx.github.io/dls-kits">
+        DLS Team
+    </author>
+
+    <content src="https://enorx.github.io/dls-kits/" />
+
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="LoadUrlTimeoutValue" value="700000" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashScreenDelay" value="0" />
+
+    <preference name="FirebaseMessagingAutoInitEnabled" value="true" />
+
+    <platform name="android">
+
+        <icon src="res/icon/android/icon.png" />
+
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+
+    </platform>
+
+</widget>
