@@ -23,12 +23,12 @@
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Fullscreen" value="true" />
-    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
     <preference name="LoadUrlTimeoutValue" value="700000" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashScreenDelay" value="0" />
-
-    <preference name="FirebaseMessagingAutoInitEnabled" value="true" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
 
     <platform name="android">
 
@@ -36,6 +36,11 @@
 
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
+        </edit-config>
+
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
         </edit-config>
 
     </platform>
